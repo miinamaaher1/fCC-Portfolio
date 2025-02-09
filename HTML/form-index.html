@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Application Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/form-styles.css">
+  </head>
+  <body>
+    <main>
+    <h1 id="title">Application Form</h1>
+    <p id="description">Infinty inc. Graduates Program</p>
+    <form id="survey-form">
+     <fieldset>
+        <label id="name-label" for="name">Full Name: <input type="text" id="name" name="full-name" class="box" required placeholder="Enter your name here..."></label>
+        <label for="email" id="email-label">Email: <input type="email" id="email" name="email" class="box" required placeholder="user@domain.com"></label>
+        <label id="number-label" for="number" >Age: <input type="number" id="number" name="age" min="18" max="26" class="box" required placeholder="Enter your age here..."></label>
+        <label for="dropdown">
+         Major: <select id="dropdown" class="box">
+            <option>select one</option>
+            <option>software engineering</option>
+            <option>data science</option>
+            <option>web development</option>
+         </select>
+        </label>
+        <label>Why should we choose you <textarea class="box" placeholder="I love coding..."></textarea></lable>
+     </fieldset>
+     <fieldset>
+       <legend>Select the program you want to apply for</legend>
+       <label for="internship"><input type="radio" name="program-type" value="internship" id="internship" class="check"> Internship</label>
+       <label for="apprenticeship"><input type="radio" name="program-type" value="apprenticeship" id="apprenticeship" class="check"> Apprenticeship</label>
+     </fieldset>
+     <fieldset>
+       <legend>Select additional skills you have</legend>
+       <label for="graphic-design"><input type="checkbox" value="graphic-design" id="graphic-design" class="check"> Graphic Design</label>
+       <label for="video-editing"><input type="checkbox" value="video-editing" id="video-editing" class="check"> Video Editing</label>
+       <label for="motion-graphics"><input type="checkbox" value="motion-graphics" id="motion-graphics" class="check"> Motion Graphics</label>
+     </fieldset>
+     <input type="submit" id="submit">
+    </form>
+</main>
+  </body>
+</html>

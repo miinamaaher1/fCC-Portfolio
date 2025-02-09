@@ -1,0 +1,225 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  color: black
+}
+.icon {
+  fill: crimson;
+}
+header {
+  padding: 10px;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+  background-color: lightgray;
+  z-index: 1;
+}
+#header-img {
+  grid-column: 1;
+  height: 40px;
+
+}
+#nav-bar {
+  grid-column: 2;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+main {
+  display: grid;
+  margin-top: 50px;
+  width: 60%;
+  max-width: 800px;
+  place-items: center;
+}
+h1 {
+  font-size:7vw;
+  text-align: center;
+  margin: 5px;
+  color: crimson;
+}
+input {
+  display: block;
+  margin: 10px auto;
+}
+input[type="email"] {
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  width: 80%;
+  height: 40px;
+}
+#submit, .option>button {
+  background-color: crimson;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+}
+#submit:hover, .option>button:hover {
+  background-color: rgb(190, 18, 52);
+}
+#submit:active, .option>button:active {
+  background-color: rgb(149, 15, 42);
+}
+p {
+  margin: 5px 0;
+}
+footer {
+  width:60%;
+  max-width: 800px;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  height: 90px;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+#options {
+  width: 100%;
+  max-width: 600px;
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  place-items: center;
+}
+.option {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, rgb(243, 138, 159), rgb(251, 46, 87));
+  border-radius: 10px;
+  padding: 10px 0;
+  width: 100%;
+  height: 200px;
+}
+.option>h3 {
+  width: 100%;
+  text-align: center;
+}
+#video-container {
+  width: 100%;
+}
+#video {
+  display: block;
+  width: 100%;
+  height: 315px;
+  margin: 0 auto;
+  max-width: 420px;
+}
+form {
+  width: 100%;
+}
+#features {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  width: 100%;
+  max-width: 600px;
+}
+.feat {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 5px;
+  align-items: center;
+}
+.icon {
+  grid-column: 1;
+}
+.txt {
+  grid-column: 2;
+}
+.bold {
+  font-weight: bold;
+}
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: lightgray;
+    height: 150px;
+  }
+  #header-img {
+    height: 40px;
+  }
+  #nav-bar {
+    top: 45px;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-link {
+    padding: 5px;
+    text-align: center;
+  }
+  main {
+    display: grid;
+    margin-top: 150px;
+    width: 60%;
+  }
+  #options {
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .option {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, rgb(243, 138, 159), rgb(251, 46, 87));
+    border-radius: 10px;
+    padding: 10px 0;
+    width: 150px;
+    margin: 5px auto;
+  }
+  .feat {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}

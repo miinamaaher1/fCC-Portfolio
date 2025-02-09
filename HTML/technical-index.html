@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Technical Documentation Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/technical-styles.css">
+  </head>
+  <body>
+    <nav id="navbar">
+        <header>CSS Specificity</header>
+        <ul>
+          <li>
+            <a class="nav-link" href="#What_is_Specificity?">What is Specificity?</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Examples">Examples</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Specificity_Hierarchy">Specificity Hierarchy</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#How_to_Calculate_Specificity?">How to Calculate Specificity?</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#More_Specificity_Rules_Examples">More Specificity Rules Examples</a>
+          </li>
+        </ul>
+      </nav>
+    <main id="main-doc">
+      <section class="main-section" id="What_is_Specificity?">
+        <header>What is Specificity?</header>
+        <p>If there are two or more CSS rules that point to the same element, the selector with the highest specificity value will "win", and its style declaration will be applied to that HTML element.</p>
+        <p>Think of specificity as a score/rank that determines which style declaration is ultimately applied to an element.</p>
+      </section>
+      <section class="main-section" id="Examples">
+        <header>Examples</header>
+        <p>Look at the following examples:</p>
+        <p>Example 1</p>
+        <p>In this example, we have used the "p" element as selector, and specified a red color for this element. The text will be red:</p>
+        <div class="block">
+          <code>
+            &lt;html&gt;<br>
+            &emsp;&lt;head&gt;<br>
+            &emsp;&emsp;&lt;style&gt;<br>
+            &emsp;&emsp;&emsp;p {color: red;}<br>
+            &emsp;&emsp;&lt;/style&gt;<br>
+            &emsp;&lt;/head&gt;<br>
+            &emsp;&lt;body&gt;<br>
+            &emsp;&emsp;&lt;p&gt;Hello World!&lt;/p&gt;<br>
+            &emsp;&lt;/body&gt;<br>
+            &lt;/html&gt;
+          </code>
+        </div>
+        <p>Example 2</p>
+        <p>In this example, we have added a class selector (named "test"), and specified a green color for this class. The text will now be green (even though we have specified a red color for the element selector "p"). This is because the class selector is given higher priority:</p>
+        <div class="block">
+          <code>
+            &lt;html&gt;<br>
+            &emsp;&lt;head&gt;<br>
+            &emsp;&emsp;&lt;style&gt;<br>
+            &emsp;&emsp;&emsp;.test {color: green;}<br>
+            &emsp;&emsp;&emsp;p {color: red;}<br>
+            &emsp;&emsp;&lt;/style&gt;<br>
+            &emsp;&lt;/head&gt;<br>
+            &emsp;&lt;body&gt;<br>
+            &emsp;&emsp;&lt;p class="test"&gt;Hello World!&lt;/p&gt;<br>
+            &emsp;&lt;/body&gt;<br>
+            &lt;/html&gt;
+          </code>
+        </div>
+        <p>Example 3</p>
+        <p>In this example, we have added the id selector (named "demo"). The text will now be blue, because the id selector is given higher priority:</p>
+        <div class="block">
+          <code>
+            &lt;html&gt;<br>
+            &emsp;&lt;head&gt;<br>
+            &emsp;&emsp;&lt;style&gt;<br>
+            &emsp;&emsp;&emsp;#demo {color: blue;}<br>
+            &emsp;&emsp;&emsp;.test {color: green;}<br>
+            &emsp;&emsp;&emsp;p {color: red;}<br>
+            &emsp;&emsp;&lt;/style&gt;<br>
+            &emsp;&lt;/head&gt;<br>
+            &emsp;&lt;body&gt;<br>
+            &emsp;&emsp;&lt;p id="demo" class="test"&gt;Hello World!&lt;/p&gt;<br>
+            &emsp;&lt;/body&gt;<br>
+            &lt;/html&gt;
+          </code>
+        </div>
+        <p>Example 4</p>
+        <p>In this example, we have added the id selector (named "demo"). The text will now be blue, because the id selector is given higher priority:In this example, we have added an inline style for the "p" element. The text will now be pink, because the inline style is given the highest priority:</p>
+        <div class="block">
+          <code>
+            &lt;html&gt;<br>
+            &emsp;&lt;head&gt;<br>
+            &emsp;&emsp;&lt;style&gt;<br>
+            &emsp;&emsp;&emsp;#demo {color: blue;}<br>
+            &emsp;&emsp;&emsp;.test {color: green;}<br>
+            &emsp;&emsp;&emsp;p {color: red;}<br>
+            &emsp;&emsp;&lt;/style&gt;<br>
+            &emsp;&lt;/head&gt;<br>
+            &emsp;&lt;body&gt;<br>
+            &emsp;&emsp;&lt;p id="demo" class="test" style="color:pink"&gt;Hello World!&lt;/p&gt;<br>
+            &emsp;&lt;/body&gt;<br>
+            &lt;/html&gt;
+          </code>
+        </div>
+      </section>
+      <section class="main-section" id="Specificity_Hierarchy">
+        <header>Specificity Hierarchy</header>
+        <p>Every CSS selector has its place in the specificity hierarchy.</p>
+        <p>There are four categories which define the specificity level of a selector:</p>
+        <ol>
+          <li>Inline styles - Example: &lt;h1 style="color: pink;"&gt;</li>
+          <li>IDs - Example: #navbar</li>
+          <li>Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]</li>
+          <li>Elements and pseudo-elements - Example: h1, ::before</li>
+          <li>Universal selector - inheret properties</li>
+        </ol>
+      </section>
+      <section class="main-section" id="How_to_Calculate_Specificity?">
+        <header>How to Calculate Specificity?</header>
+        <p>Memorize how to calculate specificity!</p>
+        <p>Start at 0, add 100 for each ID value, add 10 for each class value (or pseudo-class or attribute selector), add 1 for each element selector or pseudo-element.</p>
+        <p>Note: Inline style gets a specificity value of 1000, and is always given the highest priority!</p>
+        <p>Note 2: There is one exception to this rule: if you use the !important rule, it will even override inline styles!</p>
+      </section>
+      <section class="main-section" id="More_Specificity_Rules_Examples">
+        <header>More Specificity Rules Examples</header>
+        <p>Equal specificity: the latest rule wins - If the same rule is written twice into the external style sheet, then the latest rule wins:</p>
+        <div class="block">
+          <code>
+            h1 {background-color: yellow;}<br>
+            h1 {background-color: red;}<br>
+          </code>
+        </div>
+        <p>ID selectors have a higher specificity than attribute selectors - Look at the following three code lines:</p>
+        <div class="block">
+          <code>
+            div#a {background-color: green;}<br>
+            #a {background-color: yellow;}<br>
+            div[id=a] {background-color: blue;}<br>
+          </code>
+        </div>
+        <p>Contextual selectors are more specific than a single element selector - The embedded style sheet is closer to the element to be styled. So in the following situation</p>
+        <div class="block">
+          <code>
+            /*From external CSS file:*/<br>
+            #content h1 {background-color: red;}<br>
+            /*In HTML file:*/<br>
+            &lt;style&gt;<br>
+            &emsp;#content h1 {background-color: yellow;}<br>
+            &lt;/style&gt;<br>
+          </code>
+        </div>
+        <p>A class selector beats any number of element selectors - a class selector such as .intro beats h1, p, div, etc:</p>
+        <div class="block">
+          <code>
+            .intro {background-color: yellow;}<br>
+            h1 {background-color: red;}<br>
+          </code>
+        </div>
+        <p>The universal selector (*) and inherited values have a specificity of 0 - The universal selector (*) and inherited values are ignored!</p>
+      </section>
+    </main>
+  </body>
+</html>

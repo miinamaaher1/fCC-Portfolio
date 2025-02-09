@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: roboto;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../media/Nissan-Universe-Shouts.webp') no-repeat center center/ cover ;
+}
+#input-container {
+    width: 350px;
+    padding: 20px 10px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 3px;
+    display: flex;
+}
+input {
+    flex: 5;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+button {
+    flex:1;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+#add-task {
+    color: green;
+    border: solid 2px green;
+}
+#add-task:hover {
+    background-color: green;
+    color: white;
+}
+.task {
+    width: 350px;
+    padding: 20px 10px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 3px;
+    display: flex;
+    margin: 10px 0;
+}
+li {
+    list-style: none;
+    flex: 4;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+.check-task {
+    color: orange;
+    border: solid 2px orange;
+    margin-right: 5px;
+}
+.check-task:hover {
+    background-color: orange;
+    color: white;
+}
+.delete-task {
+    color: red;
+    border: solid 2px red;
+}
+.delete-task:hover {
+    background-color: red;
+    color: white;
+}
