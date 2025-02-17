@@ -9,34 +9,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../media/Nissan-Universe-Shouts.webp') no-repeat center center/ cover ;
+    background-image: url('../media/Nissan-Universe-Shouts.webp');
 }
 .container {
     width: 60%;
-    height: 250px;
     background-color: white;
-    border-radius: 30px;
+    border-radius: 3vw;
     box-shadow: 0 0 3px;
+    align-content: center;
 }
 #timer {
-    font-size: 72px;
+    font-size: 10vw;
     width: 100%;
-    text-align: center;
-    padding: 35px;
+    text-align: center;margin: 2vw;
 }
 .buttons {
     text-align: center;
 }
 button {
     border: none;
-    margin: 0 10px;
+    margin: 2vw;
     cursor: pointer;
 }
 i {
-    font-size: 2rem;
-    padding: 10px;
+    font-size: 5vw;
     color: white;
-    width: 50px;
+    width: 7vw;
+    height: 7vw;
+    line-height: 7vw !important;
+    border-radius: 1vw;
 }
 #play {
     background-color: green;
@@ -46,4 +47,32 @@ i {
 }
 #reset {
     background-color: red;
+}
+@media (max-width: 420px) {
+    .container {
+        width: 80%;
+        height: 50%;
+        background-color: white;
+        border-radius: 3vw;
+        box-shadow: 0 0 3px;
+    }
+    #timer {
+        font-size: 15vw;
+        width: 100%;
+        text-align: center;
+        padding: 2vw;
+    }
+    button {
+        border: none;
+        margin: 2vw;
+        cursor: pointer;
+    }
+    i {
+        font-size: 10vw;
+        color: white;
+        width: 15vw;
+        height: 15vw;
+        line-height: 15vw !important;
+        border-radius: 2vw;
+    }
 }
