@@ -4,24 +4,29 @@
     margin: 0;
     font-family: roboto;
 }
+html {
+    font-size: 16;
+}
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../media/Nissan-Universe-Shouts.webp') no-repeat center center/ cover ;
+    background-image: url('../media/Nissan-Universe-Shouts.webp');
+    background-size: cover;
 }
 #input-container {
-    width: 350px;
+    max-width: 350px;
+    width: 80vw;
     padding: 20px 10px;
     border-radius: 20px;
     background-color: white;
     box-shadow: 0 0 3px;
     display: flex;
+    gap: 5px;
 }
 input {
     flex: 5;
-    margin-right: 5px;
     padding: 5px;
     border-radius: 10px;
     font-size: 1.2rem;
@@ -43,7 +48,8 @@ button {
     color: white;
 }
 .task {
-    width: 350px;
+    max-width: 350px;
+    width: 80vw;
     padding: 20px 10px;
     border-radius: 20px;
     background-color: white;
@@ -75,4 +81,34 @@ li {
 .delete-task:hover {
     background-color: red;
     color: white;
+}
+@media (max-width: 768px) {
+    html {
+        font-size: 14px; /* Smaller size for tablets */
+    }
+}
+  
+@media (max-width: 480px) {
+    html {
+        font-size: 12px; /* Smaller size for mobile */
+    }
+    
+    .task {
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Make buttons fill the container width */
+    }
+
+    #input-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Make buttons fill the container width */
+    }
+    
+    li {
+        margin-bottom: 10px; /* Add spacing between text and buttons */
+    }
+
+    .check-task {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 5px; /* Add vertical spacing between buttons */
+    }
 }

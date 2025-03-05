@@ -2,20 +2,26 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Roboto'}
+    font-family: 'Roboto'
+}
+html {
+    font-size: 16;
+}
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url('../media/Nissan-Universe-Shouts.webp');}
+    background-image: url('../media/Nissan-Universe-Shouts.webp');
+    background-size: cover;
+}
 .container {
     width: 80%;
     max-width: 550px;
 }
 .header {
-    font-size: 21px;
+    font-size: 1.3125rem;
     color: white;
     border: solid white 2px;
     background-color: #262626;
@@ -58,21 +64,24 @@ button:hover {
 button:active {
     background-color: #060606;
 }
-@media (max-width: 420px) {
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px; /* Smaller size for tablets */
+    }
+}
+  
+@media (max-width: 480px) {
+    html {
+        font-size: 12px; /* Smaller size for mobile */
+    }
     .text {
-        font-size: 1rem;
-        line-height: 1;
+        line-height: 1.25;
     }
     .name {
-        font-size: 1.1rem;
-        text-transform: uppercase;
         margin-top: 5px;
     }
-    .header {
-        font-size: 14px;
-    }
     button {
-        font-size: 1.1rem;
         padding: 5px 10px;
         margin-top: 15px;
     }

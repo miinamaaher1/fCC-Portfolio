@@ -4,15 +4,20 @@
     margin: 0;
     font-family: roboto;
 }
+html {
+    font-size: 16;
+}
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../media/Nissan-Universe-Shouts.webp') no-repeat center center/ cover ;
+    background-image: url('../media/Nissan-Universe-Shouts.webp');
+    background-size: cover;
 }
 .accordion {
     width: 65%;
+    max-width: 600px;
     background-color: white;
     padding: 30px;
     border-radius: 30px;
@@ -22,8 +27,8 @@ body {
     text-align: center;
 }
 .question {
-    padding: 18px 0;
-    font-size: 22px;
+    padding: 18px 18px 15px 0;
+    font-size: 1.375rem;
     border-bottom: solid 1px;
     cursor: pointer;
     position: relative;
@@ -37,22 +42,58 @@ body {
 }
 .answer {
     padding-top: 15px;
+    padding-right: 18px;
     line-height: 1.5;
-    font-size: 22px;
+    font-size: 1.125rem;
     width: 100%;
     height: 0;
     overflow: hidden;
     transition: 0.5s;
+    opacity: 0;
 }
 .content-container.active .answer {
     height: 150px;
+    opacity: 1;
     overflow-y: scroll;
 }
 .content-container.active .question {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 .content-container.active .question::after {
     transform: rotate(45deg);
     color: red;
-    font-size: 22px;
+    font-size: 1.375rem;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    opacity: 0;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px; /* Smaller size for tablets */
+    }
+}
+  
+@media (max-width: 480px) {
+    html {
+        font-size: 12px; /* Smaller size for mobile */
+    }
 }

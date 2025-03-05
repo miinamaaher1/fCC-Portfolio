@@ -10,33 +10,36 @@ body {
     justify-content: center;
     align-items: center;
     background-image: url('../media/Nissan-Universe-Shouts.webp');
+    background-size: cover;
 }
 .container {
     width: 60%;
+    max-width: 600px;
     background-color: white;
-    border-radius: 3vw;
+    border-radius: min(3vw, 25px);
     box-shadow: 0 0 3px;
     align-content: center;
 }
 #timer {
-    font-size: 10vw;
+    font-size: min(12vw, 120px);
     width: 100%;
-    text-align: center;margin: 2vw;
+    text-align: center;
+    margin: min(2vw, 100px) auto;
 }
 .buttons {
     text-align: center;
 }
 button {
     border: none;
-    margin: 2vw;
+    margin: 0 min(2vw, 50px) min(2vw, 50px) min(2vw, 50px);
     cursor: pointer;
 }
 i {
-    font-size: 5vw;
+    font-size: min(5vw, 60px);
     color: white;
-    width: 7vw;
-    height: 7vw;
-    line-height: 7vw !important;
+    width: min(7vw, 80px);
+    height: min(7vw, 80px);
+    line-height: min(7vw, 80px) !important;
     border-radius: 1vw;
 }
 #play {
@@ -48,7 +51,8 @@ i {
 #reset {
     background-color: red;
 }
-@media (max-width: 420px) {
+  
+@media (max-width: 480px) {
     .container {
         width: 80%;
         height: 50%;
@@ -60,7 +64,6 @@ i {
         font-size: 15vw;
         width: 100%;
         text-align: center;
-        padding: 2vw;
     }
     button {
         border: none;
